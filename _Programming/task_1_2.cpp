@@ -6,7 +6,7 @@ using namespace std;
 typedef unsigned long long ull;
 
 bool is_prime(const ull &n) {
-    if (n == 1 || (!(n & 1)) && n != 2) return false;
+    if (n == 1 || (!(n & 1) && n != 2)) return false;
     for (ull i = 3; i <= sqrt(n); i += 2) if (!(n % i)) return false;
     return true;
 }

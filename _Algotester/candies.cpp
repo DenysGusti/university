@@ -5,7 +5,7 @@ using namespace std;
 typedef long long int ll;
 typedef long double ld;
 
-void calcsubarray(const ll a[], ll x[], int n, int c) {
+void calcsubarray(const ll a[], ll x[], const int &n, const int &c) {
     for (int i = 0; i < (1 << n); ++i) {
         ll s = 0;
         for (int j = 0; j < n; ++j) if (i & (1 << j)) s += a[j + c];
@@ -13,7 +13,7 @@ void calcsubarray(const ll a[], ll x[], int n, int c) {
     }
 }
 
-ll solvesubsetsum(ll a[], int n, ld average) {
+ll solvesubsetsum(ll a[], const int &n, const ld &average) {
     int first = n / 2, second = n - n / 2, size_X = 1 << (n / 2), size_Y = 1 << (n - n / 2);
     ll X[size_X], Y[size_Y];
     calcsubarray(a, X, first, 0);

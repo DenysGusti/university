@@ -7,8 +7,11 @@ std::vector<long long> a, b;
 
 auto lower_than(const long long &s) {
     long long res{};
-    for (const auto &el: a)
-        res += std::upper_bound(b.begin(), b.end(), s - el) - b.begin();
+    long long index = b.size();
+    for (const auto &el: a) {
+        index = std::upper_bound(b.begin(), b.begin() + index, s - el) - b.begin();
+        res += index;
+    }
     return res;
 }
 

@@ -6,11 +6,18 @@
 std::vector<long long> a, b;
 
 auto lower_than(const long long &s) {
-    long long res{};
-    long long index = b.size();
+    unsigned long res{}, index = b.size() - 1;
+    std::cout << b.end() - b.begin() << '\n';
     for (const auto &el: a) {
-        index = std::upper_bound(b.begin(), b.begin() + index, s - el) - b.begin();
-        res += index;
+        while (b.at(index) > s - el) {
+            --index;
+            if (index == -1)
+                break;
+        }
+        if (index == -1)
+            break;
+        // index = std::upper_bound(b.begin(), b.begin() + index, s - el) - b.begin();
+        res += index + 1;
     }
     return res;
 }

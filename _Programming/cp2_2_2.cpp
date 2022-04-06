@@ -42,6 +42,7 @@ int main() {
     auto arr1 = new double *[m1];
     for (int i = 0; i < m1; ++i)
         arr1[i] = new double[n1];
+
     cout << "\nenter first martix:\n";
     enter_c_matrix(arr1, m1, n1);
     print_c_matrix(arr1, m1, n1);
@@ -50,7 +51,8 @@ int main() {
     cin >> m2 >> n2;
     auto arr2 = new double *[m2];
     for (int i = 0; i < m2; ++i)
-        arr2[i] = new double[n2];
+        arr2[i] = new double[n2]
+                ;
     cout << "\nenter second martix:\n";
     enter_c_matrix(arr2, m2, n2);
     print_c_matrix(arr2, m2, n2);
@@ -61,13 +63,28 @@ int main() {
         auto res = new double *[m1];
         for (int i = 0; i < m1; ++i)
             res[i] = new double[n2];
+
         multiplicate_matrices(arr1, m1, arr2, m2, n2, res);
-        cout << "\nmultiplication:\n";
+        cout << "\nMultiplication result:\n";
         print_c_matrix(res, m1, n2);
+
         if (m1 != n2)
-            cout << "Symmetric is impossible!" << endl;
+            cout << "Symmetry is impossible!" << endl;
         else
-            cout << "Матриця " << (check_if_symmetric(res, m1) ? "" : "не" )<< " симетрична" << endl;
+            cout << "Matrix is " << (check_if_symmetric(res, m1) ? "" : "not") << " symmetric" << endl;
+
+        for (int i = 0; i < m1; ++i)
+            delete res[i];
+        delete[] res;
     }
+
+    for (int i = 0; i < m1; ++i)
+        delete arr1[i];
+    delete[] arr1;
+
+    for (int i = 0; i < m2; ++i)
+        delete arr2[i];
+    delete[] arr2;
+
     return 0;
 }

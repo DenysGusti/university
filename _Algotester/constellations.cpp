@@ -6,16 +6,6 @@
 
 using namespace std;
 
-void dfsf(int v, vector<bool> &v_used, vector<vector<int>> &adj_lst, int &sum) {
-    v_used[v] = true; //in general, i can just pop them, then no need to find unvisited
-    for (auto el: adj_lst[v]) {
-        sum++;
-        if (!v_used[el]) {
-            dfsf(el, v_used, adj_lst, sum);
-        }
-    }
-}
-
 int main() {
     int n{}, m{};
     int tmp1, tmp2;

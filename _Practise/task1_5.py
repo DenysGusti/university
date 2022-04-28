@@ -1,5 +1,7 @@
-print('Для заданих n та a обчислити суму 1 + 2²a + ... + n²aⁿ⁻¹.')
-n, a, s = int(input('n = ')), int(input('a = ')), 0  # рахую тільки для цілих n , a
-for n in range(1, n + 1):  # з 1 до n
-    s += n ** 2 * a ** (n - 1)  # + n²aⁿ⁻¹
-print(f'(i={n}, a={a})\n∑ⁱₙ₌₁n²aⁿ⁻¹ = {s}')
+# Для заданих n та a обчислити суму s = 1 + 2²a + ... + n²aⁿ⁻¹ = ∑(i=1, n) i²aⁱ⁻¹.
+if __name__ == "__main__":
+    n, a = map(int, input("n, a = ").split())  # ввід n, a
+
+    s = sum(i ** 2 * a ** (i - 1) for i in range(1, n + 1))  # до s в циклі додаємо i²aⁱ⁻¹ від 1 до n
+
+    print(f"\n{n = }, {a = }\n{s = }")

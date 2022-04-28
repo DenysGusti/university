@@ -39,8 +39,8 @@ def add(n1: list[int], n2: list[int]) -> list[int]:  # додавання
     res = []
     for pair in zip(n1, n2):  # (0-1, 0-1) кортежі одинакових розрядів 2 чисел
         digit = sum(pair, overflow)  # 0-3
-        overflow = digit // 2  # 0-1
-        res.append(digit % 2)  # 0-1
+        overflow = digit // 2  # 0-1, якщо сума розрядів вийшла >= 2, переносимо переповнення в наступний розряд
+        res.append(digit % 2)  # 0-1, додаємо останню цифру суми за основою 2
     if overflow:
         res.append(1)  # старший розряд, якщо після додавання лишилося переповнення
     return res

@@ -2,36 +2,33 @@
 # спільних символів зі всіх груп. Написати підпрограму (функцію або/та процедуру) для обчислення кількісного входження
 # символів.
 
-def number_of_letters(s: str) -> None:
-    letters = set(s)
-    letters_dict = {letter: s.count(letter) for letter in letters}
-    print('Входження: ', end='')
-    for key in sorted(letters_dict):
-        print(f'{key}: {letters_dict[key]}', end='; ')
-    print('\n')
+def number_of_letters(s: str) -> None:  # рахуємо букви і їхню кількість в стрічці
+    letters = set(s)  # множина унікальних букв
+    letters_dict = {letter: s.count(letter) for letter in letters}  # словник буква - кількість
+    print("Входження: ", end='')
+    print("; ".join(f"{key}: {value}" for key, value in sorted(letters_dict.items())))  # форматований вивід
 
 
-# Ввід
-m, n = int(input("m = ")), int(input("n = "))
-groups = [input()[:n] for _ in range(m)]
-#
+if __name__ == "__main__":
+    m, n = map(int, input("m, n = ").split())
+    groups = [input()[:n] for _ in range(m)]  # вводимо m груп (стрічок) максимум по n чарів
 
-for i, group in enumerate(groups):
-    print(f"Стрічка {i + 1}: {group}")
-    number_of_letters(group)
+    for i, group in enumerate(groups, start=1):
+        print(f"Стрічка {i}: {group}")
+        number_of_letters(group)  # рахуємо входження букв
 
-common = set.intersection(*(set(group) for group in groups))  # спільні символи
-if not common:
-    print("\nНемає спільних символів")
-else:
-    print("\nСпільні символи:", *sorted(common))
+    common = set.intersection(*(set(group) for group in groups))  # множина спільних символів
+    if not common:
+        print("\nНемає спільних символів")
+    else:
+        print("\nСпільні символи:", *sorted(common))
+        # масив к-сті спільних символів для груп
+        common_symbols = [sum(group.count(char) for char in common) for group in groups]
+        for i, k in enumerate(common_symbols, start=1):
+            print(f"Стрічка {i}: {k} спільних символів")
 
-    common_symbols = [sum(group.count(element) for element in common) for group in groups]  # к-сть спільних для групи
-    for i, k in enumerate(common_symbols):
-        print(f"Стрічка {i + 1}: {k} спільних символів")
-
-    maxShare = max(common_symbols)  # максимальне входження (багаторазове)
-    print("\nНайбільше спільних символів:")
-    for i in range(m):
-        if common_symbols[i] == maxShare:
-            print(f'Стрічка {i + 1}: {groups[i]}')
+        maxShare = max(common_symbols)  # максимальне входження спільних символів в групах
+        print(f"\nНайбільше спільних символів: {maxShare}")
+        for i, group in enumerate(groups, start=1):
+            if common_symbols[i - 1] == maxShare:  # виводимо декілька стрічок, в яких максимальна к-сть спільних
+                print(f"Стрічка {i}: {group}")

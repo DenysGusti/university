@@ -1,32 +1,31 @@
 /* Задано натуральне число n. Знайти різницю між двома числами, перше з яких побудоване на основі непарних цифр n зліва
  * направо числа, а друге - на основі парних. Якщо 0 буде в найстаршому розряді - пропускати його. Стрічки та масиви не
  * використовувати. Приклади: n = 2352361 -> 3531 - 226, n = 70892014 -> 791 - 8204. */
+
 #include <iostream>
 #include <cmath>
 
 using namespace std;
+using ll = long long;
 
 int main() {
-    unsigned long long int n;
+    ll n;
     cout << "n = ";
     cin >> n;
-    cout << '\n' << "n = " << n << endl;
 
-    unsigned long long int num1 = 0, num2 = 0;
-    short int i = 0, j = 0;
-    while (n) {
-        unsigned short int last_digit = n % 10;
-        if (last_digit & 1) {
-            num1 += last_digit * (unsigned long long int) pow(10, i);
-            i++;
+    ll num1{}, num2{}; // 2 нульові числа на основі непарних і парних
+    for (int i = 0, j = 0; n; n /= 10) { // поки n > 0 ділимо його кожен раз на 10
+        auto last_digit = n % 10; // остання цифра
+        if (last_digit & 1) {  // якщо непарна
+            num1 += last_digit * static_cast<ll>(pow(10, i)); // до числа на основі непарних додаємо ост. цифру * 10^i
+            ++i;
         } else {
-            num2 += last_digit * (unsigned long long int) pow(10, j);
-            j++;
+            num2 += last_digit * static_cast<ll>(pow(10, j)); // до числа на основі парних додаємо ост. цифру * 10^j
+            ++j;
         }
-        n /= 10;
     }
 
-    long long int res = num1 - num2;
+    auto res = num1 - num2;
     cout << num1 << " - " << num2 << " = " << res << endl;
     return 0;
 }

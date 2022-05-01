@@ -73,7 +73,7 @@ void printMatricesWithMaximalNumberOfObjects(const vector<BattleshipMatrix> &arr
     cout << "\nMaximal number of objects: " << n << '\n';
     for (int i = 1; auto &obj: arr) { // може бути декілька з найбільшою кількістю, тому проходимося 2 раз
         if (obj.getShips() == n) {
-            cout << "Matrix " << i;
+            cout << "\nMatrix " << i;
             obj.printMatrix();
         }
         ++i;

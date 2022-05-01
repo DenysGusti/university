@@ -12,24 +12,24 @@ using namespace std;
 
 class BattleshipMatrix {
 private:
-    vector<vector<int>> matrix;
-    pair<int, int> size;
-    unsigned ships{};
+    vector<vector<int>> matrix; // матриця
+    pair<int, int> size; // її розмір
+    unsigned ships{}; // кількість кораблів в об'єкті
 
-    unsigned countShips();
+    unsigned countShips(); // рахує кораблі
 
 public:
-    explicit BattleshipMatrix(vector<vector<int>>);
+    explicit BattleshipMatrix(vector<vector<int>>); // конструктор
 
-    void printMatrix() const noexcept;
+    void printMatrix() const noexcept; // друкує матрицю
 
-    unsigned getShips() const noexcept;
+    unsigned getShips() const noexcept; // ґеттер кораблів
 };
 
-vector<vector<int>> enterMatrix();
+vector<vector<int>> enterMatrix(); // читає матрицю
 
-vector<BattleshipMatrix> readMatrices();
+vector<BattleshipMatrix> readMatrices(); // створює масив об'єктів
 
-void printMatricesWithMaximalNumberOfObjects(const vector<BattleshipMatrix> &);
+void printMatricesWithMaximalNumberOfObjects(const vector<BattleshipMatrix> &); // шукає max кораблі в масиві об'єктів
 
 #endif

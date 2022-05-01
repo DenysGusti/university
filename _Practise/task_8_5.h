@@ -3,33 +3,33 @@
 
 #include <iostream>
 #include <vector>
+#include <stack>
 #include <array>
-#include <memory>
+#include <algorithm>
+#include <ranges>
 
 using namespace std;
 
 class BattleshipMatrix {
 private:
+    vector<vector<int>> matrix;
     pair<int, int> size;
     unsigned ships{};
-    const vector<vector<int>> matrix;
-
-    void recursiveDFS(vector<vector<bool>> &visited, int c, int r, array<array<int, 2>, 2> &directions);
 
     unsigned countShips();
 
 public:
-    explicit BattleshipMatrix(const vector<vector<int>> &m);
+    explicit BattleshipMatrix(vector<vector<int>>);
 
-    void print_matrix();
+    void printMatrix() const noexcept;
 
     unsigned getShips() const noexcept;
 };
 
-unique_ptr<vector<vector<int>>> enter_matrix();
+vector<vector<int>> enterMatrix();
 
-unique_ptr<vector<unique_ptr<BattleshipMatrix>>> read_matrices();
+vector<BattleshipMatrix> readMatrices();
 
-void print_matrices_with_maximal_number_of_objects(const vector<unique_ptr<BattleshipMatrix>> &arr);
+void printMatricesWithMaximalNumberOfObjects(const vector<BattleshipMatrix> &);
 
 #endif

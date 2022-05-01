@@ -7,14 +7,12 @@ using namespace std;
 
 template<class T>
 struct DoublyLinkedNode {
-public:
     T data{};
-    DoublyLinkedNode *next{}, *prev{};
+    DoublyLinkedNode *next = nullptr, *prev = nullptr;
 
-    DoublyLinkedNode(const T d, DoublyLinkedNode<T> *n, DoublyLinkedNode<T> *p) : data{d}, next{n}, prev{p} {};
+    DoublyLinkedNode(const T &d, DoublyLinkedNode<T> *n, DoublyLinkedNode<T> *p) : data{d}, next{n}, prev{p} {}
 
     ~DoublyLinkedNode() {
-        // cout << "DoublyLinkedNode destructor " << data << endl;
         delete next;
     }
 };
@@ -64,11 +62,10 @@ private:
 public:
     DoublyLinkedList() = default;
 
-    DoublyLinkedList(initializer_list<T> init) {
-        for (const auto &el: init)
+    DoublyLinkedList(const initializer_list<T> init) {
+        for (auto &el: init)
             this->push_back(el);
-        cout << "Initializer constructor" << endl;
-    };
+    }
 
     DoublyLinkedList(const DoublyLinkedList<T> &list) {
         auto node = list.head;
@@ -76,18 +73,17 @@ public:
             this->push_back(node->data);
             node = node->next;
         }
-        cout << "Copy constructor" << endl;
-    };
+    }
 
     bool empty() noexcept {
         return head == nullptr;
-    };
+    }
 
     size_t size() noexcept {
         return n;
-    };
+    }
 
-    void print() {
+    void print() const noexcept {
         auto node = head;
         while (node != nullptr) {
             cout << node->data << ' ';
@@ -96,7 +92,7 @@ public:
         cout << '\n';
     }
 
-    T front() noexcept {
+    T front() const noexcept {
         if (head == nullptr) {
             cout << "Error, list is empty" << endl;
             return T{};
@@ -104,7 +100,7 @@ public:
             return head->data;
     }
 
-    T back() noexcept {
+    T back() const noexcept {
         if (tail == nullptr) {
             cout << "Error, list is empty" << endl;
             return T{};
@@ -118,31 +114,30 @@ public:
             ++n;
         } else
             insertBefore(head, new_data);
-    };
+    }
 
     void push_back(const T &new_data) noexcept {
         if (tail == nullptr)
             push_front(new_data);
         else
             insertAfter(tail, new_data);
-    };
+    }
 
     void pop_front() noexcept {
         if (head == nullptr)
             cout << "Error, list is empty" << endl;
         else
             remove(head);
-    };
+    }
 
     void pop_back() noexcept {
         if (tail == nullptr)
             cout << "Error, list is empty" << endl;
         else
             remove(tail);
-    };
+    }
 
     ~DoublyLinkedList() {
-        // cout << "DoublyLinkedList destructor" << endl;
         delete head;
     }
 };
@@ -150,29 +145,29 @@ public:
 template<class T>
 class Stack {
 private:
-    DoublyLinkedList<T> container{};
+    DoublyLinkedList<T> container;
 public:
     Stack() = default;
 
     bool empty() noexcept {
         return container.empty();
-    };
+    }
 
     size_t size() noexcept {
         return container.size();
-    };
+    }
 
-    T top() noexcept {
+    T top() const noexcept {
         return container.back();
-    };
+    }
 
     void push(const T &new_data) noexcept {
         container.push_back(new_data);
-    };
+    }
 
     void pop() noexcept {
         container.pop_back();
-    };
+    }
 };
 
 #endif

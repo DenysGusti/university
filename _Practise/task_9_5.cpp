@@ -1,6 +1,3 @@
-#include <fstream>
-#include "task_9_5.h"
-
 /*
  Написати підпрограми (оформити з використанням *.h файлів) для роботи зі стеком на базі двонапрямного списку.
  Повинні бути методи запису в стек, читання зі стека (типу PUSH та POP) та модифікації вказівника стеку
@@ -9,6 +6,9 @@
  вивести в оберненому порядку спочатку числа на позиціях, що кратні трьом, а потім всі інші.
  Масив переглядати лише один раз.
 */
+
+#include <fstream>
+#include "task_9_5.h"
 
 int main() {
     bool input = false;
@@ -29,24 +29,3 @@ int main() {
     }
     return 0;
 }
-
-/*    DoublyLinkedList<int> uuu;
-    cout << uuu.front() << endl;
-    DoublyLinkedList<int> obj = {1, 2, 3};
-    cout << obj.empty() << endl;
-    obj.push_front(3);
-    obj.push_back(2);
-    obj.push_front(1);
-    obj.push_back(4);
-    cout << obj.size() << endl;
-    DoublyLinkedList new_obj{obj};
-    new_obj.print();
-    obj.pop_back();
-    new_obj.pop_front();
-    obj.print();
-    new_obj.print();
-    cout << new_obj.back() << endl;
-    cout << obj.size() << ' ' << new_obj.size();
-    Stack<int> s{};
-    s.push(2);
-    cout << s.top() << endl;*/

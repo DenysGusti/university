@@ -18,6 +18,31 @@ struct DoublyLinkedNode { // нод - одиниця двонапрямного 
 };
 
 template<class T>
+struct Iter { // ітератор по нодах списку; перегрузка операторів !=, *, ++ необхідна, щоб працював range-based for loop
+    // відповідно друкування списку буде виглядати як for (auto el: list) cout << el << ' ';
+    DoublyLinkedNode<T> *node{}; // пойнтер на нод
+
+    explicit Iter(DoublyLinkedNode<T> *n) : node{n} {} // explicit, бо 1 аргумент в конструкторі
+
+    bool operator!=(const Iter &other) const noexcept { // порівнює з іншим ітератором (чи не дорівнює кінцю)
+        return node != other.node;
+    }
+
+    T operator*() const noexcept { // перевантаження дереференсу для доступу до даних
+        return node->data;
+    };
+
+    const Iter &operator++() noexcept { // перевантаження інкременту ітератора
+        node = node->next;
+        return *this; // заведено повертати значення при інкременті
+    }
+
+    ~Iter() { // деструктор
+        delete node;
+    }
+};
+
+template<class T>
 class DoublyLinkedList { // сам двонапрямний список
 private:
     DoublyLinkedNode<T> *head{}, *tail{}; // пойнтер на нод-початок і нод-кінець
@@ -75,21 +100,29 @@ public:
         }
     }
 
+    T at(const size_t pos) const { // доступ до елемента за позицією за O(n)
+        if (pos >= n) // якщо позиція більша за розмір
+            throw out_of_range("size is shorter");
+        auto node = head;
+        for (size_t i = 0; i < pos; ++i) // інкремент ноду pos разів
+            node = node->next;
+        return node->data;
+    }
+
+    Iter<T> begin() const noexcept { // ітератор на початок
+        return Iter<T>(head);
+    }
+
+    Iter<T> end() const noexcept { // ітератор на кінець (tail->next)
+        return Iter<T>(nullptr);
+    }
+
     bool empty() noexcept { // перевірка чи пустий
         return head == nullptr;
     }
 
     size_t size() noexcept { // розмір
         return n;
-    }
-
-    void print() const noexcept { // друкує список
-        auto node = head;
-        while (node != nullptr) {
-            cout << node->data << ' ';
-            node = node->next;
-        }
-        cout << '\n';
     }
 
     T front() const noexcept { // доступ до першого елемента

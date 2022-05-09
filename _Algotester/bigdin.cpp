@@ -29,7 +29,7 @@ vector<pt> convex_hull(vector<pt> &a) {
         return o == 0 ? hypot(p0.x - c.x, p0.y - c.y) < hypot(p0.x - d.x, p0.y - d.y) : o < 0;
     });
     vector<pt> st;
-    st.reserve(a.size() + 1);
+    st.reserve(a.size());
     for (const auto &point: a) {
         while (st.size() > 1 && orientation(st.rbegin()[1], st.back(), point) >= 0)
             st.pop_back();

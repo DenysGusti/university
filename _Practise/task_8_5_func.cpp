@@ -67,9 +67,9 @@ vector<BattleshipMatrix> readMatrices() { // створює масив об'єк
 }
 
 void printMatricesWithMaximalNumberOfObjects(const vector<BattleshipMatrix> &arr) {
-    auto n = ranges::max_element(arr, [](auto &el1, auto &el2) { return el1.getShips() < el2.getShips(); })->getShips();
+    auto n = ranges::max_element(arr, {}, &BattleshipMatrix::getShips)->getShips();
     // ranges (C++ 20) перегружає функції для зручності роботи з масивами, max_element вертає ітератор на найбільший ел.
-    // лямбда-функція порівняння, бо оператор порівняння для класу не перегружений
+    // приймає масив, компаратор (за замовчуванням less(), {}) і проєкцію (незмінний об'єкт, за яким порівнюють)
     cout << "\nMaximal number of objects: " << n << '\n';
     for (int i = 1; auto &obj: arr) { // може бути декілька з найбільшою кількістю, тому проходимося 2 раз
         if (obj.getShips() == n) {

@@ -111,3 +111,18 @@ int main() {
         cerr << "Файл не відкрився" << endl;
     return 0;
 }
+
+/*
+10
+Apple Celeron 1 1000
+Microsoft CoreI7 16 1200
+Google CoreI3  8 500
+Mcdonalds Ryzen3 2 2020
+LPNU CoreI9 32 9999
+LPNU CoreI3 2 231
+LPNU Ryzen5 8 2020
+Google Duos 1 500
+Apple CoreI3 8 1000
+Microsoft CoreI3 4 1200
+
+*/

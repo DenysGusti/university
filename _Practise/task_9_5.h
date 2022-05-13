@@ -1,6 +1,9 @@
 #ifndef UNTITLED_TASK_9_5_H
 #define UNTITLED_TASK_9_5_H
 
+#include <iostream>
+#include <chrono>
+
 using namespace std;
 
 template<class T>
@@ -20,7 +23,7 @@ struct Iter { // ітератор по нодах списку; перегруз
 
     bool operator!=(const Iter &other) const noexcept; // порівнює з іншим ітератором (чи не дорівнює кінцю)
 
-    T operator*() const noexcept; // перевантаження дереференсу для доступу до даних
+    T &operator*() const noexcept; // перевантаження дереференсу для доступу до даних
 
     const Iter &operator++() noexcept; // перевантаження інкременту ітератора
 };
@@ -44,9 +47,9 @@ public:
 
     DoublyLinkedList(const DoublyLinkedList<T> &list); // конструктор копіювання
 
-    T at(size_t pos) const; // доступ до елемента за позицією за O(n)
+    T &at(size_t pos) const; // доступ до референса на елемент за позицією за O(n)
 
-    T operator[](size_t pos) const; // доступ за квадратними дужками
+    T &operator[](size_t pos) const; // доступ за квадратними дужками
 
     Iter<T> begin() const noexcept; // ітератор на початок
 
@@ -104,7 +107,7 @@ bool Iter<T>::operator!=(const Iter<T> &other) const noexcept { // порівн�
 }
 
 template<class T>
-T Iter<T>::operator*() const noexcept { // перевантаження дереференсу для доступу до даних
+T &Iter<T>::operator*() const noexcept { // перевантаження дереференсу для доступу до даних
     return node->data;
 }
 
@@ -172,16 +175,20 @@ DoublyLinkedList<T>::DoublyLinkedList(const DoublyLinkedList<T> &list) { // ко
 }
 
 template<class T>
-T DoublyLinkedList<T>::at(const size_t pos) const { // доступ до елемента за позицією за O(n)
+T &DoublyLinkedList<T>::at(const size_t pos) const { // доступ до референса на елемент за позицією за O(n)
     if (pos >= list_size) // якщо позиція більша за розмір
         throw out_of_range("size is shorter");
-    auto node = head;
-    for (size_t i = 0; i < pos; ++i, node = node->next) {}// інкремент ноду pos разів
+    // в залежності від індексу, обираю з якої сторони рухатись, щоб прискорити пошук у 2 рози
+    auto node = (pos <= list_size / 2 ? head : tail);
+    if (pos <= list_size / 2)
+        for (size_t i = 0; i < pos; ++i, node = node->next) {} // інкремент ноду pos разів
+    else
+        for (size_t i = 0; i < list_size - pos - 1; ++i, node = node->prev) {} // інкремент ноду list_size - pos разів
     return node->data;
 }
 
 template<class T>
-T DoublyLinkedList<T>::operator[](const size_t pos) const { // доступ за квадратними дужками
+T &DoublyLinkedList<T>::operator[](const size_t pos) const { // доступ за квадратними дужками
     return this->at(pos);
 }
 

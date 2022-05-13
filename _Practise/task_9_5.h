@@ -78,6 +78,12 @@ private:
 public:
     Stack();
 
+    Stack(initializer_list<T> init);
+
+    Stack(const Stack<T> &other);
+
+    Stack(const DoublyLinkedList<T> &other);
+
     bool empty() noexcept;
 
     size_t size() noexcept;
@@ -268,6 +274,15 @@ DoublyLinkedList<T>::~DoublyLinkedList() { // звільняю пам'ять в 
 
 template<class T>
 Stack<T>::Stack() = default;
+
+template<class T>
+Stack<T>::Stack(const initializer_list<T> init) : container(init) {} // конструктор-ініціалізатор
+
+template<class T>
+Stack<T>::Stack(const Stack<T> &other) : container(other.container) {} // конструктор копіювання
+
+template<class T>
+Stack<T>::Stack(const DoublyLinkedList<T> &other) : container(other) {} // конструктор зі списку
 
 template<class T>
 bool Stack<T>::empty() noexcept {

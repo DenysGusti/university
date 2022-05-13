@@ -19,14 +19,10 @@ int main() {
     for (int i = 1, c; input && cin.peek() != '\n' && cin >> c || !input && fs >> c; ++i)
         (i % 3 ? stack2 : stack1).push(c); // якщо позиція ділиться на 3, пушу в перший стек, інакше в другий
 
-    while (!stack1.empty()) { // виводжу перший стек (last in first out - виводиться задом наперед)
+    for (; !stack1.empty(); stack1.pop()) // виводжу перший стек (last in first out - виводиться задом наперед)
         cout << stack1.top() << ' ';
-        stack1.pop();
-    }
 
-    while (!stack2.empty()) { // виводжу другий стек
+    for (; !stack2.empty(); stack2.pop()) // виводжу другий стек
         cout << stack2.top() << ' ';
-        stack2.pop();
-    }
     return 0;
 }

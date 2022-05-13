@@ -7,6 +7,7 @@
  Масив переглядати лише один раз.
 */
 
+#include <iostream>
 #include <fstream>
 #include "task_9_5.h"
 

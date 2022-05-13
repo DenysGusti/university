@@ -59,9 +59,9 @@ public:
 
     size_t size() noexcept; // розмір
 
-    T front() const; // доступ до першого елемента
+    T& front() const; // доступ до першого елемента
 
-    T back() const; // доступ до останнього елемента
+    T& back() const; // доступ до останнього елемента
 
     void push_front(const T &new_data) noexcept; // додати спереду
 
@@ -85,7 +85,7 @@ public:
 
     size_t size() noexcept;
 
-    T top() const;
+    T& top() const;
 
     void push(const T &new_data) noexcept;
 
@@ -213,7 +213,7 @@ size_t DoublyLinkedList<T>::size() noexcept { // розмір
 }
 
 template<class T>
-T DoublyLinkedList<T>::front() const { // доступ до першого елемента
+T& DoublyLinkedList<T>::front() const { // доступ до першого елемента
     if (head == nullptr)
         throw logic_error("Error, list is empty"); // якщо пустий
     else
@@ -221,7 +221,7 @@ T DoublyLinkedList<T>::front() const { // доступ до першого ел�
 }
 
 template<class T>
-T DoublyLinkedList<T>::back() const { // доступ до останнього елемента
+T& DoublyLinkedList<T>::back() const { // доступ до останнього елемента
     if (tail == nullptr)
         throw logic_error("error, list is empty"); // якщо пустий
     else
@@ -283,7 +283,7 @@ size_t Stack<T>::size() noexcept {
 }
 
 template<class T>
-T Stack<T>::top() const {
+T& Stack<T>::top() const {
     return container.back();
 }
 

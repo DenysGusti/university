@@ -82,7 +82,7 @@ public:
 
     Stack(const Stack<T> &other);
 
-    Stack(const DoublyLinkedList<T> &other);
+    explicit Stack(const DoublyLinkedList<T> &other);
 
     bool empty() noexcept;
 

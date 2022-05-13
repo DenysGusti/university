@@ -1,9 +1,6 @@
 #ifndef UNTITLED_TASK_9_5_H
 #define UNTITLED_TASK_9_5_H
 
-#include <iostream>
-#include <chrono>
-
 using namespace std;
 
 template<class T>

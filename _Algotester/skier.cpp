@@ -182,3 +182,61 @@ int main() {
 0 0
 0 23
 */
+/*ld shortestPath(const vector<vector<pair<size_t, ld>>> &graph) {
+    priority_queue<pair<ld, size_t>, vector<pair<ld, size_t>>, greater<>> pq;
+    vector<ld> dist(graph.size(), INT16_MAX);
+    pq.emplace(0, 0);
+    dist[0] = 0;
+    {
+        cout << "\n\nalgo 1:";
+    }
+    for (; !pq.empty(); pq.pop()) {
+        {
+            cout << "\n\nbefore: ";
+            auto tmp(pq);
+            for (; !tmp.empty(); tmp.pop())
+                cout << tmp.top().first << ' ' << tmp.top().second << "\t\t";
+        }
+        size_t u = pq.top().second;
+        for (auto &[v, weight]: graph[u])
+            if (dist[v] > dist[u] + weight) {
+                dist[v] = dist[u] + weight;
+                pq.emplace(dist[v], v);
+            }
+        {
+            cout << "\nafter: ";
+            auto tmp(pq);
+            for (; !tmp.empty(); tmp.pop())
+                cout << tmp.top().first << ' ' << tmp.top().second << "\t\t";
+        }
+    }
+    {
+        priority_queue<pair<ld, size_t>, vector<pair<ld, size_t>>, greater<>> pq2;
+        vector<ld> dist2(graph.size(), INT16_MAX);
+        pq2.emplace(0, 0);
+        dist2[0] = 0;
+        cout << "\n\nalgo 2:";
+        while (!pq2.empty()) {
+            {
+                cout << "\n\nbefore: ";
+                auto tmp(pq2);
+                for (; !tmp.empty(); tmp.pop())
+                    cout << tmp.top().first << ' ' << tmp.top().second << "\t\t";
+            }
+            size_t u = pq2.top().second;
+            pq2.pop();
+            for (auto &[v, weight]: graph[u])
+                if (dist2[v] > dist2[u] + weight) {
+                    dist2[v] = dist2[u] + weight;
+                    pq2.emplace(dist[v], v);
+                }
+            {
+                cout << "\nafter: ";
+                auto tmp(pq2);
+                for (; !tmp.empty(); tmp.pop())
+                    cout << tmp.top().first << ' ' << tmp.top().second << "\t\t";
+            }
+        }
+    }
+    return dist.back();
+}*/

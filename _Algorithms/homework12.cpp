@@ -1,3 +1,5 @@
+// Написати метод isRoute() для визначення прямого зв’язку між вершинами.
+
 #include <iostream>
 #include <vector>
 #include <algorithm>

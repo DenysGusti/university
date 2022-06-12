@@ -3,9 +3,10 @@
 using namespace std;
 
 int main() {
-    unsigned long long d, a = 0, b = 1, c;
+    uint64_t d, a = 0, b = 1, c;
+    cout << "d = ";
     cin >> d;
-    for (unsigned long long i = 0; i < d; ++i) {
+    for (uint64_t i = 0; i < d; ++i) {
         c = a + b;
         a = b;
         b = c;

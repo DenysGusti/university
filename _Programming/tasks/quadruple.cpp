@@ -9,7 +9,7 @@ struct Matrix {
     Matrix(size_t m, size_t n) : rows{m}, columns{n} {
         arr = new int *[rows];
         for (size_t i = 0; i < rows; ++i)
-            arr[i] = new int[columns];
+            arr[i] = new int[columns]{};
     }
 
     void fill() const {

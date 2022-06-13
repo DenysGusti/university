@@ -9,7 +9,7 @@ struct Matrix {
     Matrix(size_t m, size_t n) : rows{m}, columns{n} {
         arr = new bool *[rows];
         for (size_t i = 0; i < rows; ++i)
-            arr[i] = new bool[columns];
+            arr[i] = new bool[columns]{};
     }
 
     void read() const {
@@ -50,9 +50,6 @@ void dfs(const size_t i, const size_t j, Matrix &visited, const Matrix &field) {
 int solve(const Matrix &field) {
     int parts{};
     Matrix visited(field.rows, field.columns);
-    for (size_t i = 0; i < visited.rows; ++i)
-        for (size_t j = 0; j < visited.columns; ++j)
-            visited.arr[i][j] = false;
 
     for (size_t i = 0; i < visited.rows; ++i)
         for (size_t j = 0; j < visited.columns; ++j)

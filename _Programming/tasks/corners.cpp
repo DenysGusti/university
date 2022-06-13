@@ -9,7 +9,7 @@ struct Matrix {
     Matrix(size_t m, size_t n) : rows{m}, columns{n} {
         arr = new bool *[rows];
         for (size_t i = 0; i < rows; ++i)
-            arr[i] = new bool[columns];
+            arr[i] = new bool[columns]{};
     }
 
     void read() const {

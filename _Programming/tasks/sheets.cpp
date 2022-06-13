@@ -26,10 +26,9 @@ int64_t findDeltaY(const vector<bool> &is_active, const vector<array<int64_t, 4>
 
     ranges::sort(e, {}, &Event::y);
 
-    size_t cnt{}; // number of active rectangles in y direction
     // this is what we are here to find, dy = sigma (end-begin),we will iterate and try to find these begin and end
     int64_t dy{}, begin{};
-    for (const auto &ev: e)
+    for (size_t cnt{}; const auto &ev: e) // number of active rectangles in y direction
         if (!ev.type) {
             if (!cnt)
                 begin = ev.y;

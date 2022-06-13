@@ -14,14 +14,16 @@ struct Matrix {
             arr[i] = new int[columns]{};
     }
 
-    void fillDiagonally() const {
+    void fillDiagonally(const int s, const int t, const int mode) const {
         if (rows == columns)
-            for (size_t n = rows, tr = 1, in = 1, i = 0; i < n * n - i; ++i) {
-                arr[in - tr + i][n - tr + i] = i + 1;
-                arr[n - in + tr - 1 - i][tr - 1 - i] = n * n - i;
+            for (size_t n = rows, tr = 1, a, b, i = 0; i < n * n - i; ++i) {
+                a = tr - tr * (tr + 1) / 2 + i;
+                b = mode == 1 ? n - tr + a : tr - 1 - a;
+                arr[a][b] = s + t * i;
+                arr[n - 1 - a][n - 1 - b] = s + t * (n * n - 1 - i);
 
-                if (i == tr - 1)
-                    tr += ++in;
+                if (i == tr * (tr + 1) / 2 - 1)
+                    ++tr;
             }
     }
 
@@ -39,10 +41,17 @@ struct Matrix {
 };
 
 int main() {
+    int s, t;
     size_t p;
     cin >> p;
+    cout << "s, t = ";
+    cin >> s >> t;
+
     Matrix abc(p, p);
-    abc.fillDiagonally();
+    abc.fillDiagonally(s, t, 1);
+    abc.print();
+    cout << '\n';
+    abc.fillDiagonally(s, t, -1);
     abc.print();
     return 0;
 }

@@ -24,14 +24,14 @@ int main() {
         getline(fin, el);
 
     for (size_t i = 0; i < target.length(); i += 2)
-        new_target.push_back(dict_ua_en[{target[i], target[i + 1]}]);
+        new_target += dict_ua_en[{target[i], target[i + 1]}];
 
     for (size_t i = 0; i < table.size(); ++i)
         for (size_t j = 0; j < table[i].length(); ++j)
             if (-48 <= table[i][j] && table[i][j] <= -46)
-                new_table[i].push_back(dict_ua_en[{table[i][j], table[i][++j]}]);
+                new_table[i] += dict_ua_en[{table[i][j], table[i][++j]}];
             else
-                new_table[i].push_back(table[i][j]);
+                new_table[i] += table[i][j];
 
     for (const auto &el: table)
         cout << el << '\n';
@@ -46,21 +46,21 @@ int main() {
             if (i < new_table.size() - new_target.length() + 1) {
                 string tmp;
                 for (size_t k = 0; k < new_target.length(); ++k)
-                    tmp.push_back(new_table[i + k][j]);
+                    tmp += new_table[i + k][j];
                 if (tmp == new_target)
                     ++counter;
             }
             if (i < new_table.size() - new_target.length() + 1 && j < new_table[i].length() - new_target.length() + 1) {
                 string tmp;
                 for (size_t k = 0; k < new_target.length(); ++k)
-                    tmp.push_back(new_table[i + k][j + k]);
+                    tmp += new_table[i + k][j + k];
                 if (tmp == new_target)
                     ++counter;
             }
             if (i > new_target.length() - 2 && j < new_table[i].length() - new_target.length() + 1) {
                 string tmp;
                 for (size_t k = 0; k < new_target.length(); ++k)
-                    tmp.push_back(new_table[i - k][j + k]);
+                    tmp += new_table[i - k][j + k];
                 if (tmp == new_target)
                     ++counter;
             }

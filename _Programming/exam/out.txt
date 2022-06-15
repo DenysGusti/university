@@ -1,11 +1,5 @@
 Input:
-Ji Josh how ya doin
-oh  brug on  brugky
-saw aw  ww awda
-asdw   wadsi  dad  wq
+ddu--abc--dd--try--ssd--jddrkd--qwerty--add--dfs--ddr
 
 Output:
-Ji Josh how ya doin // one space
-oh  brug on  brugky // more than one space
-saw aw  ww awda // more than one space
-asdw   wadsi  dad  wq // more than one space
+ddu dd ddr 

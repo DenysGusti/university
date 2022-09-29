@@ -95,10 +95,7 @@ void ShippingList::addNewShippingFromTerminal() {
 }
 
 void ShippingList::addNewShippingFromFile() {
-    for (ifstream fin{in_file}; !fin.eof(); shippings.push_back(make_unique<Shipping>(getShipping(fin)))) {
-        if (!shippings.empty())
-            cout << *shippings.back() << endl;
-    }
+    for (ifstream fin{in_file}; !fin.eof(); shippings.push_back(make_unique<Shipping>(getShipping(fin))));
 }
 
 void

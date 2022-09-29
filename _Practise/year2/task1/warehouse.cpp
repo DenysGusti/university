@@ -27,7 +27,7 @@ string Warehouse::getStr() const noexcept {
 
 void Warehouse::input(istream &is) {
     if (&is == &cin)
-        cout << "Enter departure warehouse name, city and capacity, t:" << endl;
+        cout << "Enter warehouse name, city and capacity, t:" << endl;
 
     is >> name >> city >> capacity;
 }

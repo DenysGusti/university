@@ -67,20 +67,26 @@ void ShippingList::getDataFromTerminal(string &goodsName, string &driverName, st
 }
 
 Shipping ShippingList::getShipping(istream &in) {
-    string goodsName, driverName, driverSurname, warehouseFromName, warehouseFromCity, warehouseToName, warehouseToCity;
-    ld quantity{}, capacityFrom{}, capacityTo{};
-    uint64_t duration{}, age{};
+    uint64_t duration{};
+    Goods g;
+    Warehouse wf, wt;
+    Driver d;
+
+    in >> g;
 
     if (&in == &cin)
-        getDataFromTerminal(goodsName, driverName, driverSurname, warehouseFromName, warehouseFromCity, warehouseToName,
-                            warehouseToCity, quantity, capacityFrom, capacityTo, duration, age);
-    else
-        getDataFromFile(goodsName, driverName, driverSurname, warehouseFromName, warehouseFromCity, warehouseToName,
-                        warehouseToCity, quantity, capacityFrom, capacityTo, duration, age, in);
+        cout << "Departure warehouse:" << endl;
+    in >> wf;
 
-    Goods g{goodsName, quantity};
-    Warehouse wf{warehouseFromName, warehouseFromCity, capacityFrom}, wt{warehouseToName, warehouseToCity, capacityTo};
-    Driver d{driverName, driverSurname, age};
+    if (&in == &cin)
+        cout << "Destination warehouse:" << endl;
+    in >> wt;
+
+    if (&in == &cin)
+        cout << "Enter duration, days:" << endl;
+
+    in >> d >> duration;
+
     return {shippings.size() + 1, duration, g, wf, wt, d};
 }
 
@@ -89,7 +95,10 @@ void ShippingList::addNewShippingFromTerminal() {
 }
 
 void ShippingList::addNewShippingFromFile() {
-    for (ifstream fin{in_file}; !fin.eof(); shippings.push_back(make_unique<Shipping>(getShipping(fin))));
+    for (ifstream fin{in_file}; !fin.eof(); shippings.push_back(make_unique<Shipping>(getShipping(fin)))) {
+        if (!shippings.empty())
+            cout << *shippings.back() << endl;
+    }
 }
 
 void

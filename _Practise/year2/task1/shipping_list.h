@@ -24,16 +24,6 @@ private:
 
     Shipping getShipping(istream &in);
 
-    static void getDataFromFile(string &goodsName, string &driverName, string &driverSurname, string &warehouseFromName,
-                                string &warehouseFromCity, string &warehouseToName, string &warehouseToCity,
-                                ld &quantity, ld &capacityFrom, ld &capacityTo, uint64_t &duration, uint64_t &age,
-                                istream &in);
-
-    static void
-    getDataFromTerminal(string &goodsName, string &driverName, string &driverSurname, string &warehouseFromName,
-                        string &warehouseFromCity, string &warehouseToName, string &warehouseToCity,
-                        ld &quantity, ld &capacityFrom, ld &capacityTo, uint64_t &duration, uint64_t &age);
-
     void printOnly(string_view dataType, ostream &out, bool reversed) const;
 
 public:

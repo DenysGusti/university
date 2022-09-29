@@ -37,35 +37,6 @@ void ShippingList::printAllShippingsToFile(const bool reversed = false) const {
     printAllShippings(fout, reversed);
 }
 
-void
-ShippingList::getDataFromFile(string &goodsName, string &driverName, string &driverSurname, string &warehouseFromName,
-                              string &warehouseFromCity, string &warehouseToName, string &warehouseToCity, ld &quantity,
-                              ld &capacityFrom, ld &capacityTo, uint64_t &duration, uint64_t &age, istream &in) {
-    in >> goodsName >> quantity >> warehouseFromName >> warehouseFromCity >> capacityFrom >>
-       warehouseToName >> warehouseToCity >> capacityTo >> driverName >> driverSurname >> age >> duration;
-}
-
-void ShippingList::getDataFromTerminal(string &goodsName, string &driverName, string &driverSurname,
-                                       string &warehouseFromName,
-                                       string &warehouseFromCity, string &warehouseToName, string &warehouseToCity,
-                                       ld &quantity, ld &capacityFrom, ld &capacityTo, uint64_t &duration,
-                                       uint64_t &age) {
-    cout << "Enter goods name and quantity, t:" << endl;
-    cin >> goodsName >> quantity;
-
-    cout << "Enter departure warehouse name, city and capacity, t:" << endl;
-    cin >> warehouseFromName >> warehouseFromCity >> capacityFrom;
-
-    cout << "Enter destination warehouse name, city and capacity, t:" << endl;
-    cin >> warehouseToName >> warehouseToCity >> capacityTo;
-
-    cout << "Enter driver's name, surname, age:" << endl;
-    cin >> driverName >> driverSurname >> age;
-
-    cout << "Enter duration, days:" << endl;
-    cin >> duration;
-}
-
 Shipping ShippingList::getShipping(istream &in) {
     uint64_t duration{};
     Goods g;
@@ -82,10 +53,11 @@ Shipping ShippingList::getShipping(istream &in) {
         cout << "Destination warehouse:" << endl;
     in >> wt;
 
+    in >> d;
+
     if (&in == &cin)
         cout << "Enter duration, days:" << endl;
-
-    in >> d >> duration;
+    in >> duration;
 
     return {shippings.size() + 1, duration, g, wf, wt, d};
 }

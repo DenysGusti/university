@@ -1,35 +1,27 @@
 #ifndef UNIVERSITY_DRIVER_H
 #define UNIVERSITY_DRIVER_H
 
-#include <string>
-#include <format>
+#include "shipping_member.h"
 
-using namespace std;
-using ld = long double;
-
-class Driver {
+class Driver: public ShippingMember {
 private:
-    string name, surname;
+    string surname;
     uint64_t age{};
 
 public:
     Driver();
 
-    Driver(string_view n, string_view s, uint64_t a);
-
-    string getName() const noexcept;
-
-    void setName(string_view n);
+    Driver(string_view name_, string_view surname_, uint64_t age_);
 
     string getSurname() const noexcept;
 
-    void setSurname(string_view s);
+    void setSurname(string_view surname_);
 
     uint64_t getAge() const noexcept;
 
-    void setAge(uint64_t a);
+    void setAge(uint64_t age_);
 
-    string getStr() const noexcept;
+    string getStr() const noexcept override;
 };
 
 

@@ -22,31 +22,32 @@ private:
 public:
     Shipping();
 
-    Shipping(size_t o, uint64_t t, Goods &g, Warehouse &wf, Warehouse &wt, Driver &d);
+    Shipping(size_t order_, uint64_t duration_, Goods &goods_, Warehouse &warehouseFrom_, Warehouse &warehouseTo_,
+             Driver &driver_);
 
     size_t getOrder() const noexcept;
 
-    void setOrder(size_t o);
+    void setOrder(size_t order_);
 
     uint64_t getDuration() const noexcept;
 
-    void setDuration(uint64_t d);
+    void setDuration(uint64_t duration_);
 
     Goods &getGoods() noexcept;
 
-    void setGoods(const Goods &g);
+    void setGoods(const Goods &goods_);
 
     Warehouse &getWarehouseFrom() noexcept;
 
-    void setWarehouseFrom(const Warehouse &w);
+    void setWarehouseFrom(const Warehouse &warehouseFrom_);
 
     Warehouse &getWarehouseTo() noexcept;
 
-    void setWarehouseTo(const Warehouse &w);
+    void setWarehouseTo(const Warehouse &warehouseTo_);
 
     Driver &getDriver() noexcept;
 
-    void setDriver(const Driver &d);
+    void setDriver(const Driver &driver_);
 
     string getStr() noexcept;
 };

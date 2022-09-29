@@ -2,30 +2,23 @@
 
 Driver::Driver() = default;
 
-Driver::Driver(string_view n, string_view s, const uint64_t a) : name{n}, surname{s}, age{a} {}
-
-string Driver::getName() const noexcept {
-    return name;
-}
-
-void Driver::setName(string_view n) {
-    name = n;
-}
+Driver::Driver(string_view name_, string_view surname_, const uint64_t age_) : ShippingMember{name_}, surname{surname_},
+                                                                               age{age_} {}
 
 string Driver::getSurname() const noexcept {
     return surname;
 }
 
-void Driver::setSurname(string_view s) {
-    surname = s;
+void Driver::setSurname(string_view surname_) {
+    surname = surname_;
 }
 
 uint64_t Driver::getAge() const noexcept {
     return age;
 }
 
-void Driver::setAge(const uint64_t a) {
-    age = a;
+void Driver::setAge(const uint64_t age_) {
+    age = age_;
 }
 
 string Driver::getStr() const noexcept {

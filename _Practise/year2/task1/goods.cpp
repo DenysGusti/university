@@ -1,23 +1,13 @@
 #include "goods.h"
 
-Goods::Goods() = default;
-
-Goods::Goods(string_view n, const ld q) : name{n}, quantity{q} {}
-
-string Goods::getName() const noexcept {
-    return name;
-}
-
-void Goods::setName(string_view n) {
-    name = n;
-}
+Goods::Goods(string_view name_, const ld quantity_) : ShippingMember{name_}, quantity{quantity_} {}
 
 ld Goods::getQuantity() const noexcept {
     return quantity;
 }
 
-void Goods::setQuantity(ld q) {
-    quantity = q;
+void Goods::setQuantity(const ld quantity_) {
+    quantity = quantity_;
 }
 
 string Goods::getStr() const noexcept {
@@ -32,4 +22,6 @@ Goods &Goods::operator+=(const Goods &other) {
         name = other.name;
 
     quantity += other.quantity;
+
+    return *this;
 }

@@ -4,56 +4,57 @@
 
 Shipping::Shipping() = default;
 
-Shipping::Shipping(size_t o, uint64_t t, Goods &g, Warehouse &wf, Warehouse &wt, Driver &d)
-        : order{o}, duration{t},
-          goods{std::move(g)}, warehouseFrom{std::move(wf)}, warehouseTo{std::move(wt)}, driver{std::move(d)} {}
+Shipping::Shipping(size_t order_, uint64_t duration_, Goods &goods_, Warehouse &warehouseFrom_, Warehouse &warehouseTo_,
+                   Driver &driver_)
+        : order{order_}, duration{duration_}, goods{goods_}, warehouseFrom{warehouseFrom_}, warehouseTo{warehouseTo_},
+          driver{driver_} {}
 
 size_t Shipping::getOrder() const noexcept {
     return order;
 }
 
-void Shipping::setOrder(const size_t o) {
-    order = o;
+void Shipping::setOrder(const size_t order_) {
+    order = order_;
 }
 
 uint64_t Shipping::getDuration() const noexcept {
     return duration;
 }
 
-void Shipping::setDuration(const uint64_t d) {
-    duration = d;
+void Shipping::setDuration(const uint64_t duration_) {
+    duration = duration_;
 }
 
 Goods &Shipping::getGoods() noexcept {
     return goods;
 }
 
-void Shipping::setGoods(const Goods &g) {
-    goods = g;
+void Shipping::setGoods(const Goods &goods_) {
+    goods = goods_;
 }
 
 Warehouse &Shipping::getWarehouseFrom() noexcept {
     return warehouseFrom;
 }
 
-void Shipping::setWarehouseFrom(const Warehouse &w) {
-    warehouseFrom = w;
+void Shipping::setWarehouseFrom(const Warehouse &warehouseFrom_) {
+    warehouseFrom = warehouseFrom_;
 }
 
 Warehouse &Shipping::getWarehouseTo() noexcept {
     return warehouseFrom;
 }
 
-void Shipping::setWarehouseTo(const Warehouse &w) {
-    warehouseFrom = w;
+void Shipping::setWarehouseTo(const Warehouse &warehouseTo_) {
+    warehouseTo = warehouseTo_;
 }
 
 Driver &Shipping::getDriver() noexcept {
     return driver;
 }
 
-void Shipping::setDriver(const Driver &d) {
-    driver = d;
+void Shipping::setDriver(const Driver &driver_) {
+    driver = driver_;
 }
 
 string Shipping::getStr() noexcept {

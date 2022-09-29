@@ -1,35 +1,27 @@
 #ifndef UNIVERSITY_WAREHOUSE_H
 #define UNIVERSITY_WAREHOUSE_H
 
-#include <string>
-#include <format>
+#include "shipping_member.h"
 
-using namespace std;
-using ld = long double;
-
-class Warehouse {
+class Warehouse : public ShippingMember {
 private:
-    string name, city;
+    string city;
     ld capacity{};
 
 public:
     Warehouse();
 
-    Warehouse(string_view n, string_view s, ld c);
-
-    string getName() const noexcept;
-
-    void setName(string_view n);
+    Warehouse(string_view name_, string_view city_, ld capacity_);
 
     string getCity() const noexcept;
 
-    void setCity(string_view s);
+    void setCity(string_view city_);
 
     ld getCapacity() const noexcept;
 
-    void setCapacity(ld c);
+    void setCapacity(ld capacity_);
 
-    string getStr() const noexcept;
+    string getStr() const noexcept override;
 };
 
 #endif

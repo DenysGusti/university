@@ -1,33 +1,23 @@
 #ifndef UNIVERSITY_GOODS_H
 #define UNIVERSITY_GOODS_H
 
-#include <string>
-#include <format>
-
+#include "shipping_member.h"
 #include "goods_exception.h"
 
-using namespace std;
-using ld = long double;
-
-class Goods {
+class Goods: public ShippingMember {
 private:
-    string name;
     ld quantity{};
 
 public:
-    Goods();
+    Goods() = default;
 
-    Goods(string_view n, ld q);
-
-    string getName() const noexcept;
-
-    void setName(string_view n);
+    Goods(string_view name_, ld quantity_);
 
     ld getQuantity() const noexcept;
 
-    void setQuantity(ld q);
+    void setQuantity(ld quantity_);
 
-    string getStr() const noexcept;
+    string getStr() const noexcept override;
 
     Goods &operator+=(const Goods &other);
 };

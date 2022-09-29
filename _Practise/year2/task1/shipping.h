@@ -49,7 +49,9 @@ public:
 
     void setDriver(const Driver &driver_);
 
-    string getStr() noexcept;
+    string getStr() const noexcept;
+
+    friend ostream &operator<<(ostream &os, const Shipping &obj) noexcept;
 };
 
 #endif

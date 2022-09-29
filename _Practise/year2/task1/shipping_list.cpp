@@ -19,11 +19,11 @@ void ShippingList::deleteLastShipping() {
 void ShippingList::printAllShippings(ostream &out, const bool reversed) const {
     if (!reversed)
         for (const auto &pShipping: shippings)
-            out << pShipping->getStr() << '\n';
+            out << *pShipping << '\n';
 
     else
         for (const auto &pShipping: shippings | rv::reverse)
-            out << pShipping->getStr() << '\n';
+            out << *pShipping << '\n';
 
     out << '\n';
 }
@@ -110,24 +110,24 @@ void ShippingList::printOnly(string_view dataType, ostream &out, bool reversed) 
     if (!reversed)
         for (const auto &pShipping: shippings) {
             if (dataType == "goods")
-                out << pShipping->getGoods().getStr() << '\n';
+                out << pShipping->getGoods() << '\n';
             else if (dataType == "departure warehouses")
-                out << pShipping->getWarehouseFrom().getStr() << '\n';
+                out << pShipping->getWarehouseFrom() << '\n';
             else if (dataType == "destination warehouses")
-                out << pShipping->getWarehouseTo().getStr() << '\n';
+                out << pShipping->getWarehouseTo() << '\n';
             else if (dataType == "drivers")
-                out << pShipping->getDriver().getStr() << '\n';
+                out << pShipping->getDriver() << '\n';
         }
     else
         for (const auto &pShipping: shippings | rv::reverse) {
             if (dataType == "goods")
-                out << pShipping->getGoods().getStr() << '\n';
+                out << pShipping->getGoods() << '\n';
             else if (dataType == "departure warehouses")
-                out << pShipping->getWarehouseFrom().getStr() << '\n';
+                out << pShipping->getWarehouseFrom() << '\n';
             else if (dataType == "destination warehouses")
-                out << pShipping->getWarehouseTo().getStr() << '\n';
+                out << pShipping->getWarehouseTo() << '\n';
             else if (dataType == "drivers")
-                out << pShipping->getDriver().getStr() << '\n';
+                out << pShipping->getDriver() << '\n';
         }
 
     out << '\n';

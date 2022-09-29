@@ -11,3 +11,8 @@ string ShippingMember::getName() const noexcept {
 void ShippingMember::setName(string_view name_) noexcept {
     name = name_;
 }
+
+ostream &operator<<(ostream &os, const ShippingMember &obj) noexcept {
+    os << obj.getStr();
+    return os;
+}

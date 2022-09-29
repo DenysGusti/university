@@ -1,6 +1,7 @@
 #ifndef UNIVERSITY_SHIPPING_MEMBER_H
 #define UNIVERSITY_SHIPPING_MEMBER_H
 
+#include <iostream>
 #include <string>
 #include <format>
 
@@ -21,6 +22,8 @@ public:
     void setName(string_view name_) noexcept;
 
     virtual string getStr() const noexcept = 0;
+
+    friend ostream &operator<<(ostream &os, const ShippingMember &obj) noexcept;
 };
 
 #endif

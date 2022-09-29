@@ -57,7 +57,12 @@ void Shipping::setDriver(const Driver &driver_) {
     driver = driver_;
 }
 
-string Shipping::getStr() noexcept {
+string Shipping::getStr() const noexcept {
     return format("№{} goods: {}; from: {}; to: {}; driver: {}; duration: {} days", getOrder(), goods.getStr(),
                   warehouseFrom.getStr(), warehouseTo.getStr(), driver.getStr(), getDuration());
+}
+
+ostream &operator<<(ostream &os, const Shipping &obj) noexcept {
+    os << obj.getStr();
+    return os;
 }

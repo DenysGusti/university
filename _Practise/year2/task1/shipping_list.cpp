@@ -81,15 +81,15 @@ Shipping ShippingList::getShipping(istream &in) {
     Goods g{goodsName, quantity};
     Warehouse wf{warehouseFromName, warehouseFromCity, capacityFrom}, wt{warehouseToName, warehouseToCity, capacityTo};
     Driver d{driverName, driverSurname, age};
-    return {shippings_counter++, duration, g, wf, wt, d};
+    return {shippings.size() + 1, duration, g, wf, wt, d};
 }
 
 void ShippingList::addNewShippingFromTerminal() {
-    shippings.emplace_back(make_unique<Shipping>(getShipping(cin)));
+    shippings.push_back(make_unique<Shipping>(getShipping(cin)));
 }
 
 void ShippingList::addNewShippingFromFile() {
-    for (ifstream fin{in_file}; !fin.eof(); shippings.emplace_back(make_unique<Shipping>(getShipping(fin))));
+    for (ifstream fin{in_file}; !fin.eof(); shippings.push_back(make_unique<Shipping>(getShipping(fin))));
 }
 
 void
@@ -131,4 +131,13 @@ void ShippingList::printOnly(string_view dataType, ostream &out, bool reversed) 
         }
 
     out << '\n';
+}
+
+size_t ShippingList::getSize() const noexcept {
+    return shippings.size();
+}
+
+ShippingList &ShippingList::operator+=(const Shipping &newShipping) {
+    shippings.push_back(make_unique<Shipping>(newShipping));
+    return *this;
 }

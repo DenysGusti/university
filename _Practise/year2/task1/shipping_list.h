@@ -18,8 +18,6 @@ class ShippingList {
 private:
     filesystem::path in_file, out_file;
 
-    size_t shippings_counter = 1;
-
     deque<unique_ptr<Shipping>> shippings;
 
     void printAllShippings(ostream &out, bool reversed) const;
@@ -42,6 +40,8 @@ public:
 
     ShippingList(string_view in, string_view out);
 
+    size_t getSize() const noexcept;
+
     void addNewShippingFromTerminal();
 
     void addNewShippingFromFile();
@@ -59,6 +59,8 @@ public:
     void printOnlyToTerminal(string_view dataType, bool reversed) const;
 
     void printOnlyToFile(string_view dataType, bool reversed) const;
+
+    ShippingList &operator+=(const Shipping &newShipping);
 };
 
 #endif

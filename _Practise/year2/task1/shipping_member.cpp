@@ -16,3 +16,8 @@ ostream &operator<<(ostream &os, const ShippingMember &obj) noexcept {
     os << obj.getStr();
     return os;
 }
+
+istream &operator>>(istream &is, ShippingMember &obj) {
+    obj.input(is);
+    return is;
+}

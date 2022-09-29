@@ -22,7 +22,8 @@ public:
     void setAge(uint64_t age_);
 
     string getStr() const noexcept override;
-};
 
+    void input(istream &is) override;
+};
 
 #endif

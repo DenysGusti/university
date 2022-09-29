@@ -24,3 +24,10 @@ void Warehouse::setCapacity(const ld capacity_) {
 string Warehouse::getStr() const noexcept {
     return format("{}, {}, {}t", getName(), getCity(), getCapacity());
 }
+
+void Warehouse::input(istream &is) {
+    if (&is == &cin)
+        cout << "Enter departure warehouse name, city and capacity, t:" << endl;
+
+    is >> name >> city >> capacity;
+}

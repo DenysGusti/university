@@ -24,3 +24,10 @@ void Driver::setAge(const uint64_t age_) {
 string Driver::getStr() const noexcept {
     return format("{} {}, {} y.o.", getName(), getSurname(), getAge());
 }
+
+void Driver::input(istream &is) {
+    if (&is == &cin)
+        cout << "Enter driver's name, surname, age:" << endl;
+
+    is >> name >> surname >> age;
+}

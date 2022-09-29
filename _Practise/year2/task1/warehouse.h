@@ -22,6 +22,8 @@ public:
     void setCapacity(ld capacity_);
 
     string getStr() const noexcept override;
+
+    void input(istream &is) override;
 };
 
 #endif

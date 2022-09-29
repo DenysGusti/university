@@ -20,6 +20,8 @@ public:
     string getStr() const noexcept override;
 
     Goods &operator+=(const Goods &other);
+
+    void input(istream &is) override;
 };
 
 #endif

@@ -25,3 +25,10 @@ Goods &Goods::operator+=(const Goods &other) {
 
     return *this;
 }
+
+void Goods::input(istream &is) {
+    if (&is == &cin)
+        cout << "Enter goods name and quantity, t:" << endl;
+
+    is >> name >> quantity;
+}

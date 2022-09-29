@@ -17,13 +17,19 @@ public:
 
     explicit ShippingMember(string_view name_);
 
+    virtual ~ShippingMember() = default;
+
     string getName() const noexcept;
 
     void setName(string_view name_) noexcept;
 
     virtual string getStr() const noexcept = 0;
 
+    virtual void input(istream &is) = 0;
+
     friend ostream &operator<<(ostream &os, const ShippingMember &obj) noexcept;
+
+    friend istream &operator>>(istream &is, ShippingMember &obj);
 };
 
 #endif

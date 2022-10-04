@@ -61,11 +61,39 @@ public:
     }
 };
 
+size_t maxArea(Square **arr, const size_t n) {
+    size_t k = 0;
+    auto area = arr[k]->getArea();
+    for (size_t i = 1; i < n; ++i)
+        if (arr[i]->getArea() > area) {
+            area = arr[i]->getArea();
+            k = i;
+        }
+    return k;
+}
+
+size_t maxPerimeter(Square **arr, const size_t n) {
+    size_t k = 0;
+    auto perimeter = arr[k]->getPerimeter();
+    for (size_t i = 1; i < n; ++i)
+        if (arr[i]->getPerimeter() > perimeter) {
+            perimeter = arr[i]->getPerimeter();
+            k = i;
+        }
+    return k;
+}
+
 int main() {
-    Square sq(3);
-    Rectangle rect(4, 5);
-    cout << "Square: side = " << sq.getA() << "; area = " << sq.getArea() << "; perimeter = " << sq.getPerimeter()
-         << "\nRectangle: width, height = " << rect.getA() << ", " << rect.getB() << "; area = " << rect.getArea()
-         << "; perimeter = " << rect.getPerimeter() << endl;
+    auto arr = new Square *[]{new Rectangle(2, 7), new Square(4), new Rectangle(3, 5), new Square(3)};
+    const size_t n = 4;
+
+    size_t max_area_idx = maxArea(arr, n), max_perimeter_idx = maxPerimeter(arr, n);
+
+    cout << "max area: arr[" << max_area_idx << "] - " << arr[max_area_idx]->getArea()
+         << "\nmax perimeter: arr[" << max_perimeter_idx << "] - " << arr[max_perimeter_idx]->getPerimeter() << endl;
+
+    for (size_t i = 0; i < n; ++i)
+        delete arr[i];
+    delete[] arr;
     return 0;
 }

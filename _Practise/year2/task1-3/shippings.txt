@@ -1,5 +1,5 @@
-Honey 16.5 Sklad_5 Lviv 250 Depot_7 Amsterdam 2000 Oleksandr Kovalenko 34 3
-Fruits 10 Sklad_1 Odesa 100 Depot_1 London 300 Oleg Liber 22 10
-Hoe 43 Sklad_2 Paris 500 Depot_2 Berlin 100 Ivan Libnov 12 89
-Lamps 2 Sklad_3 New_york 1000 Depot_3 Warsaw 800 Peter Morgan 52 2
-Phones 4 Sklad_4 Beijing 2000 Depot_4 London 500 Fart Gartfunkel 24 7
+Honey 16.5 Sklad_5 Lviv 250 Depot_7 Amsterdam 2000 Oleksandr Kovalenko 34 3 road
+Fruits 10 Sklad_1 Odesa 100 Depot_1 London 300 Oleg Liber 22 10 sea
+Hoe 43 Sklad_2 Paris 500 Depot_2 Berlin 100 Ivan Libnov 12 89 road
+Lamps 2 Sklad_3 New_york 1000 Depot_3 Warsaw 800 Peter Morgan 52 2 air
+Phones 4 Sklad_4 Beijing 2000 Depot_4 London 500 Fart Gartfunkel 24 7 rail

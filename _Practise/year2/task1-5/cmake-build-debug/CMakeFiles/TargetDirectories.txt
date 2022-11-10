@@ -1,0 +1,11 @@
+C:/Users/denys/CLionProjects/University/university/_Practise/year2/task1-5/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/denys/CLionProjects/University/university/_Practise/year2/task1-5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/denys/CLionProjects/University/university/_Practise/year2/task1-5/cmake-build-debug/shipping_logic/CMakeFiles/shipping_logic.dir
+C:/Users/denys/CLionProjects/University/university/_Practise/year2/task1-5/cmake-build-debug/shipping_logic/CMakeFiles/edit_cache.dir
+C:/Users/denys/CLionProjects/University/university/_Practise/year2/task1-5/cmake-build-debug/shipping_logic/CMakeFiles/rebuild_cache.dir
+C:/Users/denys/CLionProjects/University/university/_Practise/year2/task1-5/cmake-build-debug/user_menu/CMakeFiles/user_menu.dir
+C:/Users/denys/CLionProjects/University/university/_Practise/year2/task1-5/cmake-build-debug/user_menu/CMakeFiles/edit_cache.dir
+C:/Users/denys/CLionProjects/University/university/_Practise/year2/task1-5/cmake-build-debug/user_menu/CMakeFiles/rebuild_cache.dir
+C:/Users/denys/CLionProjects/University/university/_Practise/year2/task1-5/cmake-build-debug/admin_menu/CMakeFiles/admin_menu.dir
+C:/Users/denys/CLionProjects/University/university/_Practise/year2/task1-5/cmake-build-debug/admin_menu/CMakeFiles/edit_cache.dir
+C:/Users/denys/CLionProjects/University/university/_Practise/year2/task1-5/cmake-build-debug/admin_menu/CMakeFiles/rebuild_cache.dir

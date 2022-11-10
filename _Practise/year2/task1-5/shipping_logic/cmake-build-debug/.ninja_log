@@ -1,0 +1,10 @@
+# ninja log v5
+1	41	0	shipping_logic.lib	a3555a747b720ad7
+0	5	0	clean	6cb4ca787f986063
+1	695	6897375558880726	CMakeFiles/shipping_logic.dir/main.cpp.obj	d441818d85b4b33d
+0	670	6897375861302021	CMakeFiles/shipping_logic.dir/main.cpp.obj	d441818d85b4b33d
+671	702	6897375861601220	shipping_logic.lib	1e0a9bd2a14ec44a
+0	769	6897376056081167	CMakeFiles/shipping_logic.dir/main.cpp.obj	d441818d85b4b33d
+770	805	6897376056420254	shipping_logic.lib	1e0a9bd2a14ec44a
+0	2589	6897376744944279	CMakeFiles/shipping_logic.dir/main.cpp.obj	d441818d85b4b33d
+2590	2629	6897376745333242	shipping_logic.lib	1e0a9bd2a14ec44a

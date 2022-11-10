@@ -1,0 +1,3 @@
+C:/Users/denys/CLionProjects/University/university/_Practise/year2/task1-5/user_menu/cmake-build-debug/CMakeFiles/user_menu.dir
+C:/Users/denys/CLionProjects/University/university/_Practise/year2/task1-5/user_menu/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/denys/CLionProjects/University/university/_Practise/year2/task1-5/user_menu/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -16,14 +16,18 @@
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6a38840-9a78-4ea5-8d53-086757340dbc" name="Changes" comment="task 4 practise">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_menu/admin_menu.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/admin_menu/admin_menu.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-11-10T00-43-06-0628.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/user_menu/user_menu.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/user_menu/user_menu.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_menu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user_menu/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/menu.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_menu/user_menu.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/user_menu/user_menu.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +37,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
@@ -63,7 +67,8 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "last_opened_file_path": "C:/Users/denys/CLionProjects/University",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CMakeSettings"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -78,6 +83,11 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.admin_menu">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="admin_menu" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="task1_5" TARGET_NAME="admin_menu" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="task1_5" RUN_TARGET_NAME="admin_menu">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -110,6 +120,7 @@
       <workItem from="1668040346819" duration="6642000" />
       <workItem from="1668079882554" duration="805000" />
       <workItem from="1668150200401" duration="35000" />
+      <workItem from="1668649801798" duration="3774000" />
     </task>
     <task id="LOCAL-00001" summary="task 4 practise">
       <created>1668046071261</created>

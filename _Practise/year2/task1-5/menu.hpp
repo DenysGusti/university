@@ -12,27 +12,8 @@
 
 using namespace std;
 
-class Menu {
-protected:
-    shared_ptr<ShippingList> pShippingList;
-
-    enum class Option : uint8_t {
-        Zero, First, Second, Third, Fourth, Fifth, Sixth, Seventh, Eighth, Ninth, Tenth, Eleventh, Twelve, Thirteen
-    };
-
-    template<class... Args>
-    static auto functionWrapper(const auto &func, Args &&... args);
-
-    static int getInput();
-
-    static Option getOption();
-
-public:
-    explicit Menu(const shared_ptr<ShippingList> &d);
-};
-
 template<class... Args>
-auto Menu::functionWrapper(const auto &func, Args &&... args) {
+auto functionWrapper(const auto &func, Args &&... args) {
     while (true)
         try {
             return func(args...);
@@ -54,6 +35,29 @@ auto Menu::functionWrapper(const auto &func, Args &&... args) {
             cout << "Don't pop from empty array!" << endl;
         }
 }
+
+class Menu {
+protected:
+    shared_ptr<ShippingList> pShippingList;
+
+    enum class Option : uint8_t {
+        Zero, First, Second, Third, Fourth, Fifth, Sixth, Seventh, Eighth, Ninth, Tenth, Eleventh, Twelve, Thirteen
+    };
+
+    static int getInput();
+
+    static Option getOption();
+
+public:
+    explicit Menu(const shared_ptr<ShippingList> &d);
+
+    virtual void baseMenu() = 0;
+
+    virtual void shippingMenu() = 0;
+
+    virtual void dataMenu(string_view dataType) = 0;
+};
+
 
 Menu::Menu(const shared_ptr<ShippingList> &d) : pShippingList{d} {}
 

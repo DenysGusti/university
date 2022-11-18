@@ -9,7 +9,7 @@ public:
         functionWrapper([&] { baseMenu(); });
     }
 
-    void baseMenu() {
+    void baseMenu() override {
         pShippingList->addNewFromFile();
 
         while (true) {
@@ -51,7 +51,7 @@ public:
         }
     }
 
-    void shippingMenu() {
+    void shippingMenu() override {
         pShippingList->addNewFromFile();
 
         while (true) {
@@ -231,7 +231,7 @@ public:
         }
     }
 
-    void dataMenu(string_view dataType) {
+    void dataMenu(string_view dataType) override {
         pShippingList->addNewFromFile();
 
         while (true) {

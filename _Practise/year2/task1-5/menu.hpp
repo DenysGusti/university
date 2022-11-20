@@ -44,7 +44,7 @@ protected:
         Zero, First, Second, Third, Fourth, Fifth, Sixth, Seventh, Eighth, Ninth, Tenth, Eleventh, Twelve, Thirteen
     };
 
-    static int getInput();
+    static int64_t getInput();
 
     static Option getOption();
 
@@ -61,10 +61,10 @@ public:
 
 Menu::Menu(const shared_ptr<ShippingList> &d) : pShippingList{d} {}
 
-int Menu::getInput() {
+int64_t Menu::getInput() {
     string input;
     cin >> input;
-    return stoi(input);
+    return stoll(input);
 }
 
 Menu::Option Menu::getOption() {

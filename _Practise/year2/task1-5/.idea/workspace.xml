@@ -20,14 +20,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6a38840-9a78-4ea5-8d53-086757340dbc" name="Changes" comment="task 4 practise">
+    <list default="true" id="d6a38840-9a78-4ea5-8d53-086757340dbc" name="Changes" comment="added template method">
+      <change afterPath="$PROJECT_DIR$/states.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_menu/admin_menu.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/admin_menu/admin_menu.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-11-10T00-43-06-0628.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_menu/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/admin_menu/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-0a7de2435dbd804df311.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-admin_menu-Debug-fce65eefc9e6c9d20c55.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-user_menu-Debug-ffaf066bbd08553ae656.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/menu.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/menu.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_menu/user_menu.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/user_menu/user_menu.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_menu/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/user_menu/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +83,7 @@
       <recent name="C:\Users\denys\CLionProjects\University\university\_Practise\year2\task1-5\admin_menu\cmake-build-debug" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.admin_menu">
+  <component name="RunManager" selected="CMake Application.user_menu">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -120,7 +121,7 @@
       <workItem from="1668040346819" duration="6642000" />
       <workItem from="1668079882554" duration="805000" />
       <workItem from="1668150200401" duration="35000" />
-      <workItem from="1668649801798" duration="3774000" />
+      <workItem from="1668649801798" duration="13879000" />
     </task>
     <task id="LOCAL-00001" summary="task 4 practise">
       <created>1668046071261</created>
@@ -129,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668046071261</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added template method">
+      <created>1668760834132</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668760834132</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +157,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="task 4 practise" />
-    <option name="LAST_COMMIT_MESSAGE" value="task 4 practise" />
+    <MESSAGE value="added template method" />
+    <option name="LAST_COMMIT_MESSAGE" value="added template method" />
   </component>
 </project>

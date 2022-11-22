@@ -40,6 +40,42 @@ include CMakeFiles\rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = C$:\Users\denys\CLionProjects\University\university\_Practise\year2\task1-5\cmake-build-debug\
+# =============================================================================
+# Object build statements for EXECUTABLE target task1-5
+
+
+#############################################
+# Order-only phony target for task1-5
+
+build cmake_object_order_depends_target_task1-5: phony || CMakeFiles\task1-5.dir
+
+build CMakeFiles\task1-5.dir\main.cpp.obj: CXX_COMPILER__task1-5_Debug C$:\Users\denys\CLionProjects\University\university\_Practise\year2\task1-5\main.cpp || cmake_object_order_depends_target_task1-5
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++latest
+  OBJECT_DIR = CMakeFiles\task1-5.dir
+  OBJECT_FILE_DIR = CMakeFiles\task1-5.dir
+  TARGET_COMPILE_PDB = CMakeFiles\task1-5.dir\
+  TARGET_PDB = task1-5.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target task1-5
+
+
+#############################################
+# Link the executable task1-5.exe
+
+build task1-5.exe: CXX_EXECUTABLE_LINKER__task1-5_Debug CMakeFiles\task1-5.dir\main.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\task1-5.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\task1-5.dir\
+  TARGET_FILE = task1-5.exe
+  TARGET_IMPLIB = task1-5.lib
+  TARGET_PDB = task1-5.pdb
+
 
 #############################################
 # Utility command for edit_cache
@@ -264,6 +300,8 @@ build shipping_logic: phony shipping_logic\shipping_logic.lib
 
 build shipping_logic.lib: phony shipping_logic\shipping_logic.lib
 
+build task1-5: phony task1-5.exe
+
 build user_menu: phony user_menu\user_menu.exe
 
 build user_menu.exe: phony user_menu\user_menu.exe
@@ -276,7 +314,7 @@ build user_menu.exe: phony user_menu\user_menu.exe
 #############################################
 # Folder: C:/Users/denys/CLionProjects/University/university/_Practise/year2/task1-5/cmake-build-debug
 
-build all: phony shipping_logic\all user_menu\all admin_menu\all
+build all: phony task1-5.exe shipping_logic\all user_menu\all admin_menu\all
 
 # =============================================================================
 

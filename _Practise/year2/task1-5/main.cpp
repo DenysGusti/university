@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "admin_states.hpp"
-#include "../functions.hpp"
+#include "functions.hpp"
+#include "admin_menu/admin_states.hpp"
 
 using namespace std;
 

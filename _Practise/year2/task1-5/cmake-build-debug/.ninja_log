@@ -1,7 +1,11 @@
 # ninja log v5
-1	3010	6897485704568531	shipping_logic/CMakeFiles/shipping_logic.dir/main.cpp.obj	743113a78731305d
-1	2360	6897488158003627	user_menu/CMakeFiles/user_menu.dir/main.cpp.obj	8a394e385a32a590
-1	50	6897489545296830	shipping_logic/shipping_logic.lib	1384316fef754cc2
+1	2452	6908411475324128	shipping_logic/CMakeFiles/shipping_logic.dir/main.cpp.obj	743113a78731305d
+1	2701	6908424835190679	user_menu/CMakeFiles/user_menu.dir/main.cpp.obj	8a394e385a32a590
+2982	3215	6908448301057631	task1-5.exe	80e579f72eb4c4fe
+2453	2497	6908411475768010	shipping_logic/shipping_logic.lib	1384316fef754cc2
 2	2975	6897488210419310	admin_menu/CMakeFiles/admin_menu.dir/main.cpp.obj	dea2b8a898fa2de7
 50	279	6897489546224348	admin_menu/admin_menu.exe	ba84fe50604fc90a
-1	553	6897832797344648	user_menu/user_menu.exe	861a07cea878f75c
+1	2981	6908448298992359	CMakeFiles/task1-5.dir/main.cpp.obj	cb719f5751eae7da
+2701	2912	6908424837067046	user_menu/user_menu.exe	861a07cea878f75c
+1	2481	6908452730109576	admin_menu/CMakeFiles/admin_menu.dir/main.cpp.obj	dea2b8a898fa2de7
+2481	2744	6908452732384727	admin_menu/admin_menu.exe	ba84fe50604fc90a

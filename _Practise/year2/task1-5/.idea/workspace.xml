@@ -11,6 +11,7 @@
       <config projectName="task1_5" targetName="admin_menu" />
       <config projectName="task1_5" targetName="shipping_logic" />
       <config projectName="task1_5" targetName="user_menu" />
+      <config projectName="task1_5" targetName="task1-5" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -20,15 +21,32 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6a38840-9a78-4ea5-8d53-086757340dbc" name="Changes" comment="added template method">
-      <change afterPath="$PROJECT_DIR$/states.hpp" afterDir="false" />
+    <list default="true" id="d6a38840-9a78-4ea5-8d53-086757340dbc" name="Changes" comment="some changes">
+      <change afterPath="$PROJECT_DIR$/admin_menu/admin_states.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base_state.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_state.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu_and_state.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_menu/user_states.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin_menu/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/admin_menu/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-0a7de2435dbd804df311.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-admin_menu-Debug-fce65eefc9e6c9d20c55.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-user_menu-Debug-ffaf066bbd08553ae656.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/menu.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_menu/admin_menu.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_menu/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/admin_menu/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/admin_menu/admin_menu.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/admin_menu/admin_menu.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/shipping_logic/shipping_logic.lib" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/shipping_logic/shipping_logic.lib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/user_menu/user_menu.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/user_menu/user_menu.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shipping_logic/logistics/shipping_list.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/shipping_logic/logistics/shipping_list.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user_menu/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/user_menu/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_menu/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/user_menu/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_menu/user_menu.hpp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +57,13 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="My template" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
@@ -69,7 +94,8 @@
     "cidr.known.project.marker": "true",
     "last_opened_file_path": "C:/Users/denys/CLionProjects/University",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CMakeSettings"
+    "settings.editor.selected.configurable": "CMakeSettings",
+    "structure.view.defaults.are.configured": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -79,6 +105,8 @@
       <recent name="C:\Users\denys\CLionProjects\University\university\_Practise\year2\task1-5\cmake-build-debug" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\denys\CLionProjects\University\university\_Practise\year2\task1-5\admin_menu" />
+      <recent name="C:\Users\denys\CLionProjects\University\university\_Practise\year2\task1-5\user_menu" />
       <recent name="C:\Users\denys\CLionProjects\University\university\_Practise\year2\task1-5" />
       <recent name="C:\Users\denys\CLionProjects\University\university\_Practise\year2\task1-5\admin_menu\cmake-build-debug" />
     </key>
@@ -99,12 +127,18 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="task1-5" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="task1_5" TARGET_NAME="task1-5" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="task1_5" RUN_TARGET_NAME="task1-5">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="user_menu" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="task1_5" TARGET_NAME="user_menu" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="task1_5" RUN_TARGET_NAME="user_menu">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="CMake Application.task1-5" />
       <item itemvalue="CMake Application.admin_menu" />
       <item itemvalue="CMake Application.shipping_logic" />
       <item itemvalue="CMake Application.user_menu" />
@@ -121,7 +155,7 @@
       <workItem from="1668040346819" duration="6642000" />
       <workItem from="1668079882554" duration="805000" />
       <workItem from="1668150200401" duration="35000" />
-      <workItem from="1668649801798" duration="13879000" />
+      <workItem from="1668649801798" duration="47053000" />
     </task>
     <task id="LOCAL-00001" summary="task 4 practise">
       <created>1668046071261</created>
@@ -137,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668760834132</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="some changes">
+      <created>1668903242069</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668903242069</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +199,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="task 4 practise" />
     <MESSAGE value="added template method" />
-    <option name="LAST_COMMIT_MESSAGE" value="added template method" />
+    <MESSAGE value="some changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some changes" />
   </component>
 </project>

@@ -9,3 +9,5 @@ add_subdirectory(admin_menu)
 
 target_link_libraries(user_menu shipping_logic)
 target_link_libraries(admin_menu shipping_logic)
+
+add_executable(task1-5 main.cpp)

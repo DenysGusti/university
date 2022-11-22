@@ -30,7 +30,7 @@ private:
 public:
     ShippingList(string_view in, string_view out);
 
-    size_t getSize() const noexcept override;
+    [[nodiscard]] size_t getSize() const noexcept override;
 
     void addNewFromTerminal() override;
 

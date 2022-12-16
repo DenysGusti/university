@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
 }</component>
@@ -21,32 +24,27 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6a38840-9a78-4ea5-8d53-086757340dbc" name="Changes" comment="some changes">
-      <change afterPath="$PROJECT_DIR$/admin_menu/admin_states.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base_state.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_state.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu_and_state.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_menu/user_states.hpp" afterDir="false" />
+    <list default="true" id="d6a38840-9a78-4ea5-8d53-086757340dbc" name="Changes" comment="state pattern successfully recreated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_menu/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/admin_menu/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_menu/admin_menu.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_menu/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/admin_menu/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-ee0c0837587a0793520a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-74980c1f86be5aaa416a.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/admin_menu/admin_menu.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/admin_menu/admin_menu.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/shipping_logic/shipping_logic.lib" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/shipping_logic/shipping_logic.lib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/user_menu/user_menu.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/user_menu/user_menu.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shipping_logic/logistics/shipping_list.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/shipping_logic/logistics/shipping_list.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_menu/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/user_menu/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_menu/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/user_menu/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_menu/user_menu.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shippings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/shippings.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,21 +81,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/denys/CLionProjects/University",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CMakeSettings",
-    "structure.view.defaults.are.configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/denys/CLionProjects/University&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CPPToolchains&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\denys\CLionProjects\University\university\_Practise\year2\task1-5\user_menu\cmake-build-debug" />
@@ -111,12 +114,7 @@
       <recent name="C:\Users\denys\CLionProjects\University\university\_Practise\year2\task1-5\admin_menu\cmake-build-debug" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.user_menu">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="CMake Application.admin_menu">
     <configuration name="admin_menu" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="task1_5" TARGET_NAME="admin_menu" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="task1_5" RUN_TARGET_NAME="admin_menu">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -155,7 +153,12 @@
       <workItem from="1668040346819" duration="6642000" />
       <workItem from="1668079882554" duration="805000" />
       <workItem from="1668150200401" duration="35000" />
-      <workItem from="1668649801798" duration="47053000" />
+      <workItem from="1668649801798" duration="50954000" />
+      <workItem from="1669544251776" duration="8000" />
+      <workItem from="1669894280896" duration="1567000" />
+      <workItem from="1669899790124" duration="1524000" />
+      <workItem from="1669901339756" duration="125000" />
+      <workItem from="1669932626030" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="task 4 practise">
       <created>1668046071261</created>
@@ -178,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668903242069</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="state pattern successfully recreated">
+      <created>1669155793314</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669155793314</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +210,7 @@
     <MESSAGE value="task 4 practise" />
     <MESSAGE value="added template method" />
     <MESSAGE value="some changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="some changes" />
+    <MESSAGE value="state pattern successfully recreated" />
+    <option name="LAST_COMMIT_MESSAGE" value="state pattern successfully recreated" />
   </component>
 </project>

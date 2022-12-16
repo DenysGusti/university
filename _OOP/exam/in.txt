@@ -1,0 +1,8 @@
+1 Volkswagen m3 Peter 20000 4
+2 Volkswagen m2 Josh 15000 2
+3 BMW m3 Andrew 22000 4
+4 BMW m2 Ronald 22000 4
+5 BMW m5 John 12000 4
+6 Ford m1 Peter 13000 4
+7 Ford m2 Nisbeth 19000 2
+8 Porsche m4 Ronald 18000 2

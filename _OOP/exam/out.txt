@@ -1,0 +1,8 @@
+id: 5; company: BMW; model: m5; owner: John; price: 12000.000000; capacity: 4
+id: 6; company: Ford; model: m1; owner: Peter; price: 13000.000000; capacity: 4
+id: 2; company: Volkswagen; model: m2; owner: Josh; price: 15000.000000; capacity: 2
+id: 8; company: Porsche; model: m4; owner: Ronald; price: 18000.000000; capacity: 2
+id: 7; company: Ford; model: m2; owner: Nisbeth; price: 19000.000000; capacity: 2
+id: 1; company: Volkswagen; model: m3; owner: Peter; price: 20000.000000; capacity: 4
+id: 3; company: BMW; model: m3; owner: Andrew; price: 22000.000000; capacity: 4
+id: 4; company: BMW; model: m2; owner: Ronald; price: 22000.000000; capacity: 4

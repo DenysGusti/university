@@ -17,7 +17,7 @@ public:
     }
 
     string deliver() const noexcept override {
-        return "Delivered by ship.";
+        return "Delivered by truck.";
     }
 };
 

@@ -27,21 +27,18 @@ class LUDecomposition:
     def printSystem(self) -> 'LUDecomposition':
         print("\nМатриця системи:")
         for i in range(self.n):
-            print(f'''{" ".join(map(lambda x: f'{x:5}', self.A[i]))}\t|\t{self.b[i]}''')
+            print(f'''{" ".join(map(lambda x: f'{x:5.1f}', self.A[i]))}\t|\t{self.b[i]}''')
         print()
         return self
 
     def printLUMatrices(self) -> 'LUDecomposition':
-        if not all(self.U[i][i] for i in range(self.n)):
-            return self
-
         print(f"L:")
         for i in range(self.n):
-            print(f'''{" ".join(map(lambda x: f'{x:5}', self.L[i]))}''')
+            print(f'''{" ".join(map(lambda x: f'{x:5.1f}', self.L[i]))}''')
 
         print(f"\nU:")
         for i in range(self.n):
-            print(f'''{" ".join(map(lambda x: f'{x:5}', self.U[i]))}''')
+            print(f'''{" ".join(map(lambda x: f'{x:5.1f}', self.U[i]))}''')
         print()
         return self
 

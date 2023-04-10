@@ -83,6 +83,8 @@ class LUDecomposition:
         norm = sqrt(norm)
         print(f'Векторна норма ||Ax-b|| = {norm}')
 
+        return self
+
 
 def main() -> None:
     LUDecomposition().printSystem().findLUMatrices().printLUMatrices().findSolutions().findNorm()
